@@ -1,0 +1,48 @@
+<div id="sticky-menu">
+	<div class="container clearfix">
+		<div class="sticky-logo">
+			<a href="http://www.gamerheadlines.com/"><img src="http://www.gamerheadlines.com/wp-content/uploads/2014/01/logo2.png" alt="The Gamer Headlines" title="The Gamer Headlines" width="300" height="48"></a>
+		</div>
+	</div>
+</div>
+<div style="text-align: center; font-size: 10em; width: 100%; margin: 0 auto; background-color: #f3f3f3;">TESTING, TESTING, TESTING!</div>
+<header></header>
+<div style="text-align: center; font-size: 10em; width: 100%; margin: 0 auto; background-color: #f3f3f3;">TESTING, TESTING, TESTING!</div>
+<div style="text-align: center; font-size: 10em; width: 100%; margin: 0 auto; background-color: #f3f3f3;">TESTING, TESTING, TESTING!</div>
+<div style="text-align: center; font-size: 10em; width: 100%; margin: 0 auto; background-color: #f3f3f3;">TESTING, TESTING, TESTING!</div>
+<div style="text-align: center; font-size: 10em; width: 100%; margin: 0 auto; background-color: #f3f3f3;">TESTING, TESTING, TESTING!</div>
+<style type="text/css">
+#sticky-menu {
+	display: none;
+	position: fixed;
+	height: 54px;
+	top: -60px;
+	left: 0;
+	width: 100%;
+	background-color: #FFF;
+	z-index: 100000;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+$(document).ready(function() { 
+  var sticky = $('#sticky-menu').offset().top;//change this for thigger the if statement
+  var stickyNav = function(){
+  	var scrollTop = $(window).scrollTop();  
+  	if (scrollTop > sticky) {
+  		$('#sticky-menu').css({ 'display': 'block'});
+  		$('#sticky-menu').animate({'top':"0"},250);}
+  		else {
+
+  			$('#sticky-menu').animate({'top':-"60"},250);
+  			$('#sticky-menu').hide(0);
+  		}
+  		};  
+  stickyNav();
+  $(window).scroll(function(){  
+  	stickyNav();
+  });
+});  
+</script>
